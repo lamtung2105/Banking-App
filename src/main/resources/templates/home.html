@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${appName}">Banking App</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        .status-card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .success {
+            border-left: 5px solid #4CAF50;
+        }
+        .test-links {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        .test-links a {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        .test-links a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 th:text="${appName}">Banking Application</h1>
+
+        <div class="status-card success">
+            <h3>🎉 Chúc mừng!</h3>
+            <p th:text="${message}">Hệ thống đã khởi động thành công!</p>
+            <p><strong>Spring Boot Banking Application đã sẵn sàng!</strong></p>
+        </div>
+        
+        <div class="status-card">
+            <h3>📊 Thông tin hệ thống</h3>
+            <ul>
+                <li>✅ Spring Boot Web đã hoạt động</li>
+                <li>✅ Thymeleaf Template Engine đã sẵn sàng</li>
+                <li>✅ MySQL Database connection đã cấu hình</li>
+                <li>✅ Spring Security đã được tích hợp</li>
+                <li>✅ Hot reload (DevTools) đã kích hoạt</li>
+            </ul>
+        </div>
+        
+        <div class="test-links">
+            <a href="/api/test" target="_blank">🧪 Test REST API</a>
+            <a href="#" onclick="testDatabase()">🗄️ Test Database</a>
+            <a href="#" onclick="showNext()">🚀 Bước tiếp theo</a>
+        </div>
+    </div>
+    
+    <script>
+        function testDatabase() {
+            alert('Database test sẽ được implement trong bước tiếp theo!');
+        }
+        
+        function showNext() {
+            alert('Tiếp theo: Tạo Entity classes và Database Schema!');
+        }
+        
+        // Hiển thị thông báo thành công
+        setTimeout(() => {
+            console.log('🎉 Banking App đã khởi động thành công!');
+            console.log('📝 Commit 1 hoàn thành: Database configuration');
+        }, 1000);
+    </script>
+</body>
+</html>
