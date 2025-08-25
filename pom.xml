@@ -11,8 +11,8 @@
     <groupId>com.banking</groupId>
     <artifactId>banking-app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>baking-app</name>
-    <description>baking-app</description>
+    <name>banking-app</name>
+    <description>banking-app</description>
     <url/>
     <licenses>
         <license/>
